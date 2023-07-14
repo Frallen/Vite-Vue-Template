@@ -17,7 +17,7 @@ export default defineConfig({
     plugins: [
         vue(),
         Components({
-            dirs: ['./src/components'],
+            dirs: ['./src/components',"./src/pages"],
             dts: true
         }),
         AutoImport({

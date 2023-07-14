@@ -1,10 +1,13 @@
 <template>
   <div>
     <Error v-if="isError"></Error>
-    <div v-else>
+    <div v-else class="container">
+      <suspense>
+        <router-view v-slot="{ Component }">
+          <component :is="Component"/>
+        </router-view>
+      </suspense>
       <Navigation></Navigation>
-      <Suspense>
-      </Suspense>
     </div>
   </div>
 </template>
