@@ -2,11 +2,11 @@
   <div>
     <Error v-if="isError"></Error>
     <div v-else class="container">
-      <suspense>
-        <router-view v-slot="{ Component }">
+      <router-view v-slot="{ Component }">
+        <suspense>
           <component :is="Component"/>
-        </router-view>
-      </suspense>
+        </suspense>
+      </router-view>
       <Navigation></Navigation>
     </div>
   </div>
